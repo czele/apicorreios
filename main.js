@@ -1,6 +1,4 @@
-'use strict';
-
-const limparFormulario = (endereco) => {
+const limparFormulario = () => {
     document.getElementById('endereco').value = '';
     document.getElementById('bairro').value = '';
     document.getElementById('cidade').value = '';
@@ -14,7 +12,7 @@ const preencherFormulario = (endereco) => {
 }
 
 const eNumero = (numero) => /^[0-9]+$/.test(numero);
-const cepValido = (cep) => cep.length == 8 && eNuermo(cep);
+const cepValido = (cep) => cep.length == 8 && eNumero(cep);
 
 const pesquisarCep = async() => {
     limparFormulario();
@@ -33,6 +31,15 @@ const pesquisarCep = async() => {
     {
         document.getElementById('endereco').value = 'CEP incorreto'
     }
-}
+};
+
+const botaoAcao = document.getElementById('acao');
+const pMensagem = document.getElementById('mensagem');
+
+botaoAcao.addEventListener('click', () => {
+    const msg = `Seu nome é ${nome.value}, seu e-mail é ${email.value}. E você mora no(a) ${endereco.value}, número ${numero.value}, no bairro ${bairro.value}, cidade de ${cidade.value}, estado de ${estado.value} no CEP: ${cep.value}.`
+    console.log(msg)
+    //pMensagem.innerHTML = msg
+})
 
 document.getElementById('cep').addEventListener('focusout', pesquisarCep);

@@ -30,6 +30,11 @@ body {
     gap: 40px;
 }
 
+.mensagem {
+    text-align: center;
+    color: var(--primary-color);
+}
+
 .title {
     font-size: 40px;
     text-align: center;
