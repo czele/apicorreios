@@ -37,9 +37,7 @@ const botaoAcao = document.getElementById('acao');
 const pMensagem = document.getElementById('mensagem');
 
 botaoAcao.addEventListener('click', () => {
-    const msg = `Seu nome é ${nome.value}, seu e-mail é ${email.value}. E você mora no(a) ${endereco.value}, número ${numero.value}, no bairro ${bairro.value}, cidade de ${cidade.value}, estado de ${estado.value} no CEP: ${cep.value}.`
-    console.log(msg)
-    //pMensagem.innerHTML = msg
+    pMensagem.innerHTML = `Seu nome é ${nome.value}, seu e-mail é ${email.value}. E você mora no(a) ${endereco.value}, número ${numero.value}, no bairro ${bairro.value}, cidade de ${cidade.value}, estado de ${estado.value} no CEP: ${cep.value}.`
 })
 
 document.getElementById('cep').addEventListener('focusout', pesquisarCep);

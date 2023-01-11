@@ -30,7 +30,7 @@ body {
     gap: 40px;
 }
 
-.mensagem {
+#mensagem {
     text-align: center;
     color: var(--primary-color);
 }
